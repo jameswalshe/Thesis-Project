@@ -1,0 +1,544 @@
+/* BODY STYLING */
+
+body {
+    background-color: rgb(235, 235, 235);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* OUTER STYLING */
+
+
+/* USED REPEATEDLY TO HOUSE DIVS */
+
+.outer {
+    /* box-shadow: 2.5px 2.5px rgba(148, 148, 148, 0.787); */
+    padding: 40px;
+    border-radius: 5px;
+    margin-top: 25px;
+    background-color: rgba(243, 243, 243, 0.938);
+    margin-bottom: 25px;
+}
+
+
+/* INFO STYLING */
+
+
+/* USED REPEATEDLY TO STYLE DIVS */
+
+#info {
+    border-radius: 5px;
+    box-shadow: 2.5px 2.5px rgba(148, 148, 148, 0.787);
+    background-color: white;
+    text-align: center;
+    padding: 15px;
+    color: #2b4b94;
+    height: 100%;
+    width: 100%;
+}
+
+
+/* FILTERS STYLING */
+
+#filter_box {
+    border-radius: 5px;
+    box-shadow: 2.5px 2.5px rgba(148, 148, 148, 0.787);
+    text-align: center;
+    padding: 5px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #3a63b4;
+    height: 325px;
+    color: white;
+}
+
+#filter_row {
+    margin: 10px;
+    width: fit-content;
+    margin-left: auto;
+    color: white;
+    margin-right: auto;
+}
+
+.filter_button {
+    width: 125px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dropdown-menu {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+#counties_added {
+    border-radius: 5px;
+    box-shadow: 2.5px 2.5px rgba(148, 148, 148, 0.787);
+    background-color: white;
+    text-align: center;
+    padding: 15px;
+    color: #2b4b94;
+    max-width: 415px;
+    overflow-x: hidden;
+    height: 325px;
+}
+
+#start_here {
+    overflow: hidden;
+    border-radius: 25px;
+    height: 100%;
+    background-color: white;
+    align-items: center;
+    background-image: url('//files/images/start\ \ here.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    display: none;
+}
+
+#start_counties {
+    text-align: center;
+    line-height: 325px;
+    width: 350px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+/* SCROLLBARS */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+ ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+#selected_county {
+    background-color: blueviolet;
+}
+
+
+/* CHART STYLING */
+
+#chart_menu {
+    background-color: white;
+    border-radius: 5px;
+    width: fit-content;
+    padding: 25px;
+    box-shadow: 2.5px 2.5px rgba(148, 148, 148, 0.787);
+}
+
+.chart_menu_button {
+    color: #2b4b94;
+    width: 125px;
+    margin: 5px;
+}
+
+#chart_title {
+    border-radius: 5px;
+    box-shadow: 5px 5px rgba(179, 179, 179, 0.664);
+    background-color: #3a63b4;
+    text-align: center;
+    padding: 15px;
+    width: 50%;
+    color: white;
+    margin-bottom: 25px;
+}
+
+#chart_area {
+    margin-top: 25px;
+    width: 100%;
+}
+
+#chart_div_map {
+    border-radius: 5px;
+    width: 100%;
+    height: 85%;
+    margin-top: 15px;
+}
+
+#chart_section {
+    width: 100%;
+    height: 100%;
+}
+
+#map_section {
+    width: 100%;
+    height: 100%;
+}
+
+#chart_div_map_colours {
+    margin-left: 15px;
+    width: 100%;
+    box-shadow: 5px 5px rgba(179, 179, 179, 0.664);
+    border-radius: 25px;
+    padding: 5px;
+    height: 10%;
+}
+
+#price_range_left {
+    padding: 5px;
+    text-align: left;
+    font-weight: bold;
+}
+
+#price_range_right {
+    padding: 5px;
+    text-align: right;
+    font-weight: bold;
+}
+
+
+/* FOOTER STYLING */
+
+#footer {
+    width: 100vw;
+    color: white;
+    background: linear-gradient(58deg, rgba(43, 75, 148, 1) 38%, rgba(76, 126, 217, 1) 89%);
+}
+
+
+/* SELECTED STYLING */
+
+#selected_cars {
+    margin-bottom: 15px;
+}
+
+#selected_image {
+    width: 75%;
+    border-radius: 15px;
+}
+
+#chosen_car {
+    border-radius: 5px;
+    box-shadow: 5px 5px rgba(179, 179, 179, 0.664);
+    background-color: #3a63b4;
+    text-align: center;
+    padding: 15px;
+    color: white;
+    margin-bottom: 25px;
+}
+
+
+/* SUGGESTED STYLING */
+
+#suggested-title {
+    border-radius: 5px;
+    box-shadow: 5px 5px rgba(179, 179, 179, 0.664);
+    background-color: #3a63b4;
+    text-align: center;
+    padding: 15px;
+    width: 50%;
+    color: white;
+    margin-bottom: 25px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.suggested {
+    margin: 5px;
+    text-align: center;
+    display: block;
+}
+
+#suggested_image {
+    width: 75%;
+    border-radius: 15px;
+}
+
+
+/* SPACER STYLING */
+
+.spacer {
+    margin: 15px;
+    display: none;
+}
+
+
+/* LOADER STYLING */
+
+#loading {
+    display: block;
+}
+
+#loader {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 150px;
+    width: 25%;
+    padding: 50px;
+}
+
+#no_results {
+    margin: 15px;
+    width: fit-content;
+    background-color: blanchedalmond;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 5px;
+    box-shadow: 2.5px 2.5px rgba(148, 148, 148, 0.787);
+    background-color: white;
+    text-align: center;
+    padding: 25px;
+    color: #2b4b94;
+    width: fit-content;
+    display: none;
+}
+
+
+/* RESULTS VISIBILTY */
+
+.results {
+    display: none;
+}
+
+#results {
+    display: none;
+}
+
+
+/* GARAGE */
+
+.background_image {
+    margin-top: 50px;
+    padding: 5px;
+    height: fit-content;
+    background-color: rgb(206, 206, 206);
+    background-image: url('https://jameswalshe.ie/carcompare/files/images/background.jpg');
+}
+
+
+/* LOGIN FORM */
+
+#login_form {
+    margin-top: 50px;
+    width: 25%;
+}
+
+
+/* SAVED SEARCHES */
+
+#saved_search_title {
+    margin: 15px;
+    width: fit-content;
+    background-color: blanchedalmond;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 5px;
+    box-shadow: 2.5px 2.5px rgba(148, 148, 148, 0.787);
+    background-color: white;
+    text-align: center;
+    padding: 25px;
+    color: #2b4b94;
+    width: fit-content;
+}
+
+#saved_tile {
+    height: fit-content;
+    border-radius: 15px;
+    box-shadow: 2.5px 2.5px rgba(148, 148, 148, 0.787);
+    padding: 25px;
+    margin: 15px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    align-items: center;
+}
+
+#saved_image {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    overflow: hidden;
+    padding: 15px;
+    ;
+}
+
+#saved_info {
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#saved_car_info {
+    text-align: center;
+    padding: 5px;
+    color: #2b4b94;
+}
+
+#search_delete {
+    padding-left: 50px;
+    margin: 2.5px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* LOGIN AND LOGOUT */
+
+#login_box {
+    margin-top: 5px;
+    display: none;
+    text-align: center;
+}
+
+#logout_box {
+    margin-top: 5px;
+    display: none;
+    text-align: center;
+}
+
+.login_button {
+    width: 150px;
+    background-color: #3a63b4;
+    color: white;
+}
+
+.user_box {
+    margin-top: 25px;
+    width: 30%;
+    text-align: center;
+}
+
+
+/* TOOLTIP ANIMATION AND STYLING */
+
+[data-tooltip] {
+    position: relative;
+    cursor: default;
+}
+
+[data-tooltip]::after {
+    position: absolute;
+    width: 250px;
+    left: calc(50% - 125px);
+    bottom: 150%;
+    content: attr(data-tooltip);
+    text-align: center;
+    box-sizing: border-box;
+    background-color: white;
+    color: #3a63b4;
+    box-shadow: 5px 5px rgb(179, 179, 179);
+    padding: 15px;
+    font-size: medium;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 0, transform 0.2s;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 15px;
+}
+
+[data-tooltip]:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+/* MEDIA ONLY QUERIES */
+
+@media screen and (max-width: 1400px) {
+    .results {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .outer {
+        margin-top: 5px;
+        margin-bottom: 15px;
+        padding: 5px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        margin-left: 0px;
+        margin-right: 0px;
+        box-shadow: none;
+        background-color: none;
+        width: 100%;
+    }
+    #info {
+        width: 90%;
+        margin-bottom: 5px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 15px;
+    }
+    #filter_box {
+        padding: 5px;
+        margin: 0px;
+        height: fit-content;
+    }
+    .filter_button {
+        width: 200px;
+        margin-top: 5px;
+    }
+    #chosen_car {
+        width: 95%;
+    }
+    .results {
+        display: none !important;
+    }
+    .spacer {
+        display: block;
+    }
+    #loader {
+        width: 75%;
+    }
+    #loading {
+        margin: 0px;
+        margin-bottom: 15px;
+    }
+    #start_counties {
+        display: none;
+    }
+    #counties_added {
+        display: none;
+    }
+    .background_image {
+        padding: 15px;
+    }
+    #login_form {
+        margin-top: 50px;
+        width: 90%;
+    }
+    #logo {
+        width: 75%;
+    }
+    .mobile {
+        display: block;
+    }
+    .login {
+        display: none;
+    }
+    #login_box {
+        display: block;
+    }
+    .user_box {
+        width: 90%;
+    }
+    #saved_image {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #saved_tile {
+        width: 95%;
+    }
+}

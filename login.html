@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="files/style/bootstrap.css">
+    <link rel="stylesheet" href="files/style/style.css">
+    <title>CarCompare | Login</title>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <!--
+        NAVBAR
+    -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <script>
+                function home() {
+                    document.cookie = "saved_search = -";
+                    window.location = "index.html"
+                }
+            </script>
+            <a class="navbar-brand me-auto" onclick="home()"><img src="files/images/logo.png" id="logo"></a>
+
+        </div>
+    </nav>
+
+
+    <div class="container-fluid background_image">
+        <div class="container outer" id="login_form">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password">
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <button onclick="login()" class="btn btn-primary">Login</button>
+                </div>
+                <div class="col-8">
+                    <a href="register.html">Register here</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--
+        FOOTER
+    -->
+    <footer class="mt-auto" id="footer">
+        <div class="text-center p-4">
+            © 2020 Copyright jameswalshe.ie
+        </div>
+    </footer>
+
+</body>
+
+
+
+<script src="files/js utilities/login.js"></script>
+
+</html>

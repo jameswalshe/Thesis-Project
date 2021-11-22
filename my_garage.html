@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="files/style/bootstrap.css">
+    <link rel="stylesheet" href="files/style/style.css">
+    <title>CarCompare | Saved Searches</title>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <!--
+        NAVBAR
+    -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <script>
+                function home() {
+                    document.cookie = "saved_search = -";
+                    window.location = "index.html"
+                }
+
+                function logout() {
+                    document.cookie = "username = ";
+                    window.location.href = "index.html"
+                }
+            </script>
+            <a class="navbar-brand me-auto" onclick="home()"><img src="files/images/logo.png" id="logo"></a>
+
+        </div>
+    </nav>
+
+    <div class="container-fluid user_box">
+        <div class="row">
+            <div class="col-sm">
+                <button class="btn btn-light login_button" onclick="home()" type="button">
+                    New Search
+                </button>
+                <button class="btn btn-light login_button" onclick="logout()" type="button">
+                    Logout
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container-fluid background_image">
+        <div class="container " id="saved_search_title">
+            <h1>Saved Searches</h1>
+            <h5>Here you can view up to date prices on all the seaches you have saved!</h5>
+        </div>
+    </div>
+
+    <!--
+        PAGE BODY
+    -->
+    <div class="container outer">
+        <div id="saved_searches">
+        </div>
+    </div>
+
+    <!--
+        FOOTER
+    -->
+    <footer class="mt-auto" id="footer">
+        <div class="text-center p-4">
+            © 2020 Copyright jameswalshe.ie
+        </div>
+    </footer>
+
+</body>
+<script src="files/js utilities/login.js"></script>
+<script src="files/js utilities/get_cookie.js"></script>
+<script src="files/js utilities/requests.js"></script>
+<script src="files/js utilities/my_garage_requests.js"></script>
+
+
+
+
+</html>

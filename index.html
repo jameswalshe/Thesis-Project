@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="files/style/bootstrap.css">
+    <link rel="stylesheet" href="files/style/style.css">
+    <title>CarCompare | Home</title>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <!--
+        NAVBAR
+    -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <script>
+                function home() {
+                    document.cookie = "saved_search = -";
+                    window.location = "index.html"
+                }
+            </script>
+            <a class="navbar-brand me-auto" onclick="home()"><img src="files/images/logo.png" id="logo"></a>
+
+        </div>
+    </nav>
+
+    <div class="container-fluid user_box">
+        <div id="">
+            <div class="row " id="login_box">
+                <div class="col-sm">
+                    <button class="btn btn-light login_button" id="login" type="button">
+                        Login
+                    </button>
+                    <button class="btn btn-light login_button" id="register" type="button">
+                        Register
+                    </button>
+                </div>
+            </div>
+            <div class="row " id="logout_box">
+                <div class="col">
+
+                </div>
+                <div class="col">
+                    <button class="btn btn-light login_button" id="saved_searches" type="button">
+                        Saved Searches
+                    </button>
+                    <button class="btn btn-light login_button" id="logout" type="button">
+                        Logout
+                    </button>
+                </div>
+                <div class="col">
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="container-fluid background_image">
+        <!--
+        FILTER AND INFO BOX
+    -->
+        <div class="container outer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="row">
+                            <div class="container" id="info">
+                                <h2>What do we do?</h2>
+                                <p>We analyse the price of every car that gets uploaded to the Donedeal marketplace, so that we can help you value your car.
+                                </p>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="container" id="info">
+                                <h2>How does it work?</h2>
+                                <p>Select some filters and hit search. We will do the work for you and figure out what your car is worth.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="container" id="filter_box">
+                            <div class="row" id="filter_row">
+                                <div class="col">
+                                    <div class="dropdown">
+                                        <button class="btn btn-light dropdown-toggle filter_button" type="button" id="make_button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Make
+                                        </button>
+                                        <ul class="dropdown-menu" id="make_list" aria-labelledby="dropdownMenuButton1">
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="dropdown">
+                                        <button class="btn btn-light dropdown-toggle filter_button" type="button" id="model_button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Model
+                                        </button>
+                                        <ul class="dropdown-menu" id="model_list" aria-labelledby="dropdownMenuButton1">
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" id="filter_row">
+                                <div class="col">
+                                    <div class="dropdown">
+                                        <button class="btn btn-light dropdown-toggle filter_button" type="button" id="min_year_button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Min Year
+                                        </button>
+                                        <ul class="dropdown-menu" id="min_year_list" aria-labelledby="dropdownMenuButton1">
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="dropdown">
+                                        <button class="btn btn-light dropdown-toggle filter_button" type="button" id="max_year_button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Max Year
+                                        </button>
+                                        <ul class="dropdown-menu" id="max_year_list" aria-labelledby="dropdownMenuButton1">
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row" id="filter_row">
+                                <div class="col">
+                                    <label class="form-label">Min Mileage</label>
+                                    <input class="form-control filter_button" id="min_mileage">
+                                </div>
+                                <div class="col">
+                                    <label class="form-label">Max Mileage</label>
+                                    <input class="form-control filter_button" id="max_mileage">
+                                </div>
+                            </div>
+
+                            <div class="row" id="filter_row">
+                                <div class="col">
+                                    <button class="btn btn-light filter_button" id="submit_button" onclick="search()" type="button">
+                                        Search
+                                    </button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn btn-light filter_button" onclick="reset()" type="button">
+                                        Reset
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="row" id="save_button">
+
+                            </div>
+                            <div class="row" id="select_error">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm" id="start_counties">
+                        <div class="container" id="start_here">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--
+        PAGE BODY
+    -->
+    <div class="container">
+
+        <div class="container-fluid outer results">
+            <div id="info" style="padding-left: 15%; padding-right: 15%;">
+                <h2>What's all this?</h2>
+                <p>The sections below explain in detail what value you can expect to put on your selected car. The first box is a basic price breakdown, the second box is a few cars we think you might like, and the third is a more detailed breakdown where
+                    you can examine the price a bit further.
+                </p>
+            </div>
+        </div>
+
+        <!--
+            SELECTED CAR, INFO BOX AND PRICE BREAKDOWN
+        -->
+        <div class="container-fluid outer " id="results">
+            <div class="row" id="info">
+                <div class="col-sm">
+
+                    <div class="row" id="chosen_car">
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm">
+                            <h5 data-tooltip="The price estimate is our calculation of what you can expect to pay for this car. ">
+                                Price Estimate <i class='far fa-question-circle fa' style='color: #3a63b4'></i>
+                            </h5>
+                        </div>
+                        <div class="col-sm">
+
+                            <div id="average_price">
+
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm">
+                            <h5 data-tooltip="The more cars that are available, the more accurate the price estimate will be.">
+                                Cars Available <i class='far fa-question-circle fa' style='color: #3a63b4'></i>
+                            </h5>
+                        </div>
+                        <div class="col-sm">
+                            <div id="num_available">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm" id="select_image">
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid outer results">
+            <div class="row" id="info">
+                <div id="suggested-title">
+                    <h4 data-tooltip="We've picked some cars in a similar range to what you have selected that might be worth considering.">
+                        Have you considered? <i class='far fa-question-circle fa' style='color: white'></i>
+                    </h4>
+                </div>
+
+                <div class="row">
+                    <div class="row" id="selected_cars">
+                        <div class="col-sm suggested" id="suggested_car_1">
+                        </div>
+                        <div class="col-sm suggested" id="suggested_car_2">
+
+                        </div>
+                        <div class="col-sm suggested" id="suggested_car_3">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--
+            LOADING GIF
+        -->
+        <div class="container" id="loading">
+            <img src="files/images/loader.gif" id="loader">
+            <div id="no_results">
+                <h5>Sorry! No results found.</h5>
+            </div>
+        </div>
+
+        <!--
+            NAVS, CHART INFO AND CHARTS
+        -->
+        <div class="container-fluid outer results">
+            <div class="container" id="chart_title">
+                <h4>Detailed Price Breakdown</h4>
+            </div>
+            <div class="container-fluid" id="info">
+                <p>Below we have broken down the price of the car you have chosen by various vehicle specs. It's like the average price we showed you above but it's broken down into a bit more detail here. Use the menu on the left to choose a breakdown.
+                </p>
+            </div>
+            <div class="row" id="chart_area">
+                <div class="col-2" id="chart_menu">
+                    <div class="col-sm">
+                        <button type="button" onclick="renderChart('Year','year','0')" class="btn btn-outline-light chart_menu_button">Year</button>
+                    </div>
+                    <div class="col-sm">
+                        <button type="button" onclick="renderChart('Mileage','mileage','8')" class="btn btn-outline-light chart_menu_button">Mileage</button>
+                    </div>
+                    <div class="col-sm">
+                        <button type="button" onclick="renderChart('Engine','engine_size','4')" class="btn btn-outline-light chart_menu_button">Engine</button>
+
+                    </div>
+                    <div class="col-sm">
+                        <button type="button" onclick="renderChart('Body Type','body_type','3')" class="btn btn-outline-light chart_menu_button">Body Type</button>
+
+                    </div>
+                    <div class="col-sm">
+                        <button type="button" onclick="renderChart('Colour','colour','5')" class="btn btn-outline-light chart_menu_button">Colour</button>
+
+                    </div>
+                    <div class="col-sm">
+                        <button type="button" onclick="renderChart('Fuel','fuel','1')" class="btn btn-outline-light chart_menu_button">Fuel</button>
+
+                    </div>
+                    <div class="col-sm">
+                        <button type="button" onclick="renderChart('Transmission','transmission','2')" class="btn btn-outline-light chart_menu_button">Transmission</button>
+
+                    </div>
+                    <div class="col-sm">
+                        <button type="button" onclick="renderLocation()" class="btn btn-outline-light chart_menu_button">Location</button>
+
+                    </div>
+
+                </div>
+                <div class="col-10">
+                    <div id="info">
+                        <div class="container" id="chart_section">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--
+        FOOTER
+    -->
+    <footer class="mt-auto" id="footer">
+        <div class="text-center p-4">
+            © 2020 Copyright jameswalshe.ie
+        </div>
+    </footer>
+
+</body>
+<script src="files/js utilities/requests.js"></script>
+<script src="files/js utilities/filters.js"></script>
+<script src="files/js utilities/login.js"></script>
+<script src="files/js utilities/search.js"></script>
+<script src="files/js utilities/chart_renders.js"></script>
+<script src="files/js utilities/get_cookie.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.bundle.min.js" integrity="sha512-PqRelaJGXVuQ81N6wjUrRQelCDR7z8RvKGiR9SbSxKHPIt15eJDmIVv9EJgwq0XvgylszsjzvQ0+VyI2WtIshQ==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="https://kit.fontawesome.com/053ba6c559.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+<script src="files/js utilities/saved_search_results.js"></script>
+
+</html>
